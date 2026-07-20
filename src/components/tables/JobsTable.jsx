@@ -1,18 +1,10 @@
-import { jobsTableData } from "../../data/mockJobs";
+import TableCard from "./TableCard";
+// import { jobsTableData } from "../../data/mockJobs";
 
-export default function JobsTable() {
+export default function JobsTable({ jobs }) {
+    console.log(jobs);
     return (
-        <div
-            className="rounded-3xl border p-6"
-            style={{
-                background: "var(--color-card)",
-                borderColor: "var(--color-border)",
-            }}
-        >
-            <h3 className="text-lg font-semibold mb-6">
-                Latest Job Listings
-            </h3>
-
+        <TableCard title="Latest Job Listings">
             <table className="w-full border-collapse">
                 <thead>
                     <tr
@@ -30,7 +22,7 @@ export default function JobsTable() {
                 </thead>
 
                 <tbody>
-                    {jobsTableData.map((job, index) => (
+                    {jobs.map((job, index) => (
                         <tr
                             key={index}
                             className="border-b hover:bg-gray-50 transition"
@@ -47,6 +39,6 @@ export default function JobsTable() {
                     ))}
                 </tbody>
             </table>
-        </div>
+        </TableCard>
     );
 }

@@ -5,6 +5,7 @@ export const jobsTableData = [
         location: "Bengaluru",
         salary: "18–22L",
         skills: "React, TypeScript",
+        workMode: "Hybrid",
     },
     {
         role: "Data Analyst",
@@ -12,6 +13,7 @@ export const jobsTableData = [
         location: "Remote",
         salary: "10–14L",
         skills: "SQL, Python",
+        workMode: "Remote",
     },
     {
         role: "Backend Engineer",
@@ -19,6 +21,7 @@ export const jobsTableData = [
         location: "Hyderabad",
         salary: "16–20L",
         skills: "Java, Spring",
+        workMode: "Onsite",
     },
     {
         role: "ML Engineer",
@@ -26,6 +29,7 @@ export const jobsTableData = [
         location: "Pune",
         salary: "20–28L",
         skills: "Python, TensorFlow",
+        workMode: "Hybrid",
     },
     {
         role: "Cloud Engineer",
@@ -33,5 +37,22 @@ export const jobsTableData = [
         location: "Remote",
         salary: "15–19L",
         skills: "AWS, Docker",
+        workMode: "Remote",
     },
+    {
+    role: "Frontend Engineer",
+    company: "Acme Corp",
+    location: "Bengaluru",
+    workMode: "Hybrid",
+    salary: "18–22L",
+    skills: "React, TypeScript",
+},
+{
+    role: "Data Analyst",
+    company: "Flux Labs",
+    location: "Remote",
+    workMode: "Remote",
+    salary: "10–14L",
+    skills: "SQL, Python",
+},
 ];

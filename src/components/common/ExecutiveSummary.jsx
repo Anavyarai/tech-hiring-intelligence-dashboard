@@ -1,3 +1,5 @@
+import SectionTitle from "./SectionTitle";
+
 export default function ExecutiveSummary() {
     return (
         <section
@@ -7,14 +9,9 @@ export default function ExecutiveSummary() {
                 borderColor: "var(--color-border)",
             }}
         >
-            <h2
-                className="text-xl font-semibold mb-5"
-                style={{
-                    color: "var(--color-text)",
-                }}
-            >
+            <SectionTitle>
                 Executive Summary
-            </h2>
+            </SectionTitle>
 
             <div className="space-y-4">
                 <p
