@@ -1,4 +1,11 @@
 import ExecutiveSummary from "../components/common/ExecutiveSummary";
+import KPICard from "../components/cards/KPICard";
+import { dashboardKPIs } from "../data/mockAnalytics";
+import HiringTrendChart from "../components/charts/HiringTrendChart";
+import SkillDemandChart from "../components/charts/SkillDemandChart";
+import LocationChart from "../components/charts/LocationChart";
+import SalaryDistributionChart from "../components/charts/SalaryDistributionChart";
+import JobsTable from "../components/tables/JobsTable";
 
 export default function Dashboard() {
     return (
@@ -8,80 +15,33 @@ export default function Dashboard() {
                 <ExecutiveSummary />
 
                 <section className="grid grid-cols-4 gap-6">
-                    <div
-                        className="rounded-2xl border h-44"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
-
-                    <div
-                        className="rounded-2xl border h-44"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
-
-                    <div
-                        className="rounded-2xl border h-44"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
-
-                    <div
-                        className="rounded-2xl border h-44"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
-                </section>
+                {dashboardKPIs.map((kpi) => (
+                <KPICard
+                key={kpi.id}
+                title={kpi.title}
+                value={kpi.value}
+                trend={kpi.trend}
+                direction={kpi.direction}
+                />
+            ))}
+            </section>
 
                 <section className="grid grid-cols-2 gap-6">
-                    <div
-                        className="rounded-2xl border h-64"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
 
-                    <div
-                        className="rounded-2xl border h-64"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
+                    <HiringTrendChart />
 
-                    <div
-                        className="rounded-2xl border h-64"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
+                    <SkillDemandChart />
 
-                    <div
-                        className="rounded-2xl border h-64"
-                        style={{
-                            background: "var(--color-card)",
-                            borderColor: "var(--color-border)",
-                        }}
-                    />
+                    <LocationChart />
+
+                    <SalaryDistributionChart />
+
                 </section>
 
-                <section
-                    className="rounded-2xl border h-96"
-                    style={{
-                        background: "var(--color-card)",
-                        borderColor: "var(--color-border)",
-                    }}
-                />
+                <JobsTable />
+
+            
+                
             </div>
         </main>
     );
