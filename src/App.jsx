@@ -1,7 +1,18 @@
+import Navbar from "./components/layout/Navbar";
+import PageContainer from "./components/layout/PageContainer";
+import Sidebar from "./components/layout/Sidebar";
+import Dashboard from "./pages/Dashboard";
+
 export default function App() {
-  return (
-    <div className="flex items-center justify-center min-h-screen text-4xl font-bold">
-      Tailwind is Working 🚀
-    </div>
-  );
+    return (
+        <PageContainer>
+            <Navbar />
+
+            <div className="flex flex-1 overflow-hidden">
+                <Sidebar />
+
+                <Dashboard />
+            </div>
+        </PageContainer>
+    );
 }

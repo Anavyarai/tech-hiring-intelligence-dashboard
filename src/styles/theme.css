@@ -1,0 +1,56 @@
+:root {
+    /* Backgrounds */
+    --color-background: #faf9f5;
+    --color-sidebar: #f0eee6;
+    --color-card: #ffffff;
+
+    /* Borders */
+    --color-border: #e5e2d9;
+
+    /* Text */
+    --color-text: #2b2a26;
+    --color-text-secondary: #6b6a64;
+
+    /* Brand */
+    --color-primary: #c96f50;
+    --color-primary-hover: #b86245;
+    --color-primary-active: #a9563d;
+
+    /* Status */
+    --color-success: #5a8a6e;
+    --color-warning: #c9973f;
+    --color-danger: #c1584a;
+
+    /* Layout */
+    --navbar-height: 72px;
+    --sidebar-width: 280px;
+    --content-padding: 32px;
+    --card-radius: 16px;
+    --grid-gap: 24px;
+
+    /* Shadow */
+    --shadow-sm: 0 1px 3px rgba(25, 20, 15, 0.06);
+    --shadow-md: 0 8px 24px rgba(25, 20, 15, 0.08);
+
+    /* Animation */
+    --transition: 0.2s ease;
+}
+
+[data-theme="dark"] {
+    --color-background: #1f1e1b;
+    --color-sidebar: #262521;
+    --color-card: #2c2b27;
+
+    --color-border: #3d3b35;
+
+    --color-text: #f5f3ed;
+    --color-text-secondary: #a6a49b;
+
+    --color-primary: #e08b69;
+    --color-primary-hover: #d5795a;
+    --color-primary-active: #c96f50;
+
+    --color-success: #6fa687;
+    --color-warning: #d4a855;
+    --color-danger: #d07566;
+}
